@@ -1,96 +1,192 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Sistema de Numeración</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-        }
+function generarTeoria(id){
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
+const teoria = {
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            max-width: 700px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+binario: `
+<h3>📖 Definición</h3>
+<p>
+El sistema binario es una forma de representar información usando solo dos valores: 0 y 1.
+</p>
 
-        h2 {
-            color: #3498db;
-        }
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Sirve para que las computadoras puedan entender y procesar datos, ya que internamente solo reconocen dos estados: encendido y apagado.
+</p>
 
-        img {
-            width: 100%;
-            max-width: 400px;
-            display: block;
-            margin: 10px auto;
-        }
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En todos los dispositivos digitales: computadoras, móviles, consolas, internet.
+</p>
 
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-    </style>
-</head>
-<body>
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Se combinan 0 y 1 para formar números y datos.
+<br>Ejemplo: 101 = número en binario.
+</p>
+`,
 
-<h1>💻 Sistema de Numeración</h1>
+hexadecimal: `
+<h3>📖 Definición</h3>
+<p>
+El sistema hexadecimal es una forma de representar números usando 16 símbolos: del 0 al 9 y de la A a la F.
+</p>
 
-<div class="card">
-    <h2>🔢 Binario (1 y 0)</h2>
-    <p>
-        El sistema binario usa solo dos números: <b>1</b> y <b>0</b>.
-        Las computadoras solo entienden estos dos valores.
-    </p>
-    <p>
-        Piensa en un interruptor de luz:
-        <br>💡 Encendido = 1  
-        <br>💡 Apagado = 0
-    </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Binary_code.svg/320px-Binary_code.svg.png" alt="Binario">
-</div>
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Permite escribir números binarios de forma más corta y fácil de leer.
+</p>
 
-<div class="card">
-    <h2>🧮 Hexadecimal</h2>
-    <p>
-        El sistema hexadecimal usa números del <b>0 al 9</b> y letras de la <b>A a la F</b>.
-    </p>
-    <p>
-        Es como contar, pero después del 9 siguen letras:
-        <br>10 = A  
-        <br>11 = B  
-        <br>15 = F
-    </p>
-    <p>
-        Se usa mucho en computadoras para representar colores y datos.
-    </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hexadecimal-system.svg/320px-Hexadecimal-system.svg.png" alt="Hexadecimal">
-</div>
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En programación, colores web (#FF0000), direcciones de memoria.
+</p>
 
-<div class="card">
-    <h2>📦 Representación de la información</h2>
-    <p>
-        Las computadoras guardan todo usando <b>binario</b> (1 y 0).
-    </p>
-    <p>
-        Por ejemplo:
-        <br>La letra "A" tiene un código en binario.
-    </p>
-    <p>
-        Todo lo que ves (fotos, videos, texto) está hecho con combinaciones de 1 y 0.
-    </p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/ASCII_Code_Chart.svg/320px-ASCII_Code_Chart.svg.png" alt="ASCII">
-</div>
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Después del 9 siguen letras:
+<br>A = 10, B = 11, ..., F = 15
+</p>
+`,
 
-</body>
-</html>
+info: `
+<h3>📖 Definición</h3>
+<p>
+Es la forma en que una computadora guarda y representa datos usando números binarios.
+</p>
+
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Permite almacenar texto, imágenes, videos y sonidos dentro de una computadora.
+</p>
+
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En todo lo digital: archivos, juegos, apps, internet.
+</p>
+
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Cada tipo de dato tiene un código.
+<br>Ejemplo: la letra "A" tiene un valor en binario.
+</p>
+`,
+
+cpu: `
+<h3>📖 Definición</h3>
+<p>
+La CPU es el "cerebro" de la computadora.
+</p>
+
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Ejecuta instrucciones y controla todo lo que hace el sistema.
+</p>
+
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En cualquier dispositivo electrónico: PC, móvil, consola.
+</p>
+
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Lee instrucciones de los programas y las ejecuta paso a paso.
+</p>
+`,
+
+ram: `
+<h3>📖 Definición</h3>
+<p>
+La RAM es una memoria temporal que guarda datos mientras la computadora está encendida.
+</p>
+
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Permite que los programas funcionen rápido mientras los usas.
+</p>
+
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En computadoras, móviles y consolas.
+</p>
+
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Cuando abres un programa, se guarda en RAM.
+Cuando lo cierras o apagas el equipo, se borra.
+</p>
+`,
+
+and: `
+<h3>📖 Definición</h3>
+<p>
+AND es una operación lógica que solo da verdadero si ambas condiciones son verdaderas.
+</p>
+
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Sirve para tomar decisiones donde se necesitan varias condiciones al mismo tiempo.
+</p>
+
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En programación, videojuegos y sistemas electrónicos.
+</p>
+
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Ejemplo:
+<br>true AND true → true
+<br>true AND false → false
+</p>
+`,
+
+or: `
+<h3>📖 Definición</h3>
+<p>
+OR es una operación lógica que da verdadero si al menos una condición es verdadera.
+</p>
+
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Permite tomar decisiones más flexibles.
+</p>
+
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En programación y lógica de sistemas.
+</p>
+
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Ejemplo:
+<br>true OR false → true
+</p>
+`,
+
+not: `
+<h3>📖 Definición</h3>
+<p>
+NOT es una operación que cambia el valor: verdadero pasa a falso y viceversa.
+</p>
+
+<h3>🎯 ¿Para qué sirve?</h3>
+<p>
+Sirve para invertir condiciones.
+</p>
+
+<h3>📍 ¿Dónde se usa?</h3>
+<p>
+En programación y lógica.
+</p>
+
+<h3>⚙️ ¿Cómo se usa?</h3>
+<p>
+Ejemplo:
+<br>NOT true → false
+</p>
+`
+
+};
+
+return teoria[id] || "<p>Contenido en construcción...</p>";
+}
