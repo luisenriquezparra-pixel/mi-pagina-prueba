@@ -1,62 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi página</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <title>Sistema de Numeración</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      text-align: center;
-    }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
 
-    h1 {
-      margin-bottom: 10px;
-    }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 700px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-    p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+        h2 {
+            color: #3498db;
+        }
 
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background: white;
-      color: #2a5298;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+        img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 10px auto;
+        }
 
-    button:hover {
-      transform: scale(1.05);
-    }
-  </style>
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>Mi página 🌐</h1>
-    <p>(hol)</p>
-    <button onclick="alert('Hola 😄')">Haz clic</button>
-  </div>
+<h1>💻 Sistema de Numeración</h1>
+
+<div class="card">
+    <h2>🔢 Binario (1 y 0)</h2>
+    <p>
+        El sistema binario usa solo dos números: <b>1</b> y <b>0</b>.
+        Las computadoras solo entienden estos dos valores.
+    </p>
+    <p>
+        Piensa en un interruptor de luz:
+        <br>💡 Encendido = 1  
+        <br>💡 Apagado = 0
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Binary_code.svg/320px-Binary_code.svg.png" alt="Binario">
+</div>
+
+<div class="card">
+    <h2>🧮 Hexadecimal</h2>
+    <p>
+        El sistema hexadecimal usa números del <b>0 al 9</b> y letras de la <b>A a la F</b>.
+    </p>
+    <p>
+        Es como contar, pero después del 9 siguen letras:
+        <br>10 = A  
+        <br>11 = B  
+        <br>15 = F
+    </p>
+    <p>
+        Se usa mucho en computadoras para representar colores y datos.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hexadecimal-system.svg/320px-Hexadecimal-system.svg.png" alt="Hexadecimal">
+</div>
+
+<div class="card">
+    <h2>📦 Representación de la información</h2>
+    <p>
+        Las computadoras guardan todo usando <b>binario</b> (1 y 0).
+    </p>
+    <p>
+        Por ejemplo:
+        <br>La letra "A" tiene un código en binario.
+    </p>
+    <p>
+        Todo lo que ves (fotos, videos, texto) está hecho con combinaciones de 1 y 0.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/ASCII_Code_Chart.svg/320px-ASCII_Code_Chart.svg.png" alt="ASCII">
+</div>
 
 </body>
 </html>
